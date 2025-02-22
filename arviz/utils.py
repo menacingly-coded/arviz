@@ -330,6 +330,7 @@ class Numba:
     """A class to toggle numba states."""
 
     numba_flag = numba_check()
+    """bool: Indicates whether Numba optimizations are enabled. Defaults to False."""
 
     @classmethod
     def disable_numba(cls):
@@ -731,8 +732,10 @@ class Dask:
     but it doesn't work with all stats nor diagnostics yet.
     """
 
-    dask_flag = False
+    dask_flag = False 
+    """bool: Enables Dask parallelization when set to True. Defaults to False."""
     dask_kwargs = None
+    """dict: Additional keyword arguments for Dask configuration. Defaults to an empty dictionary."""
 
     @classmethod
     def enable_dask(cls, dask_kwargs=None):
